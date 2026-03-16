@@ -1,0 +1,45 @@
+---
+title: "Hello MDX：一篇示例文章"
+description: "验证：Astro + Content Collections + MDX + Tailwind 是否正常工作。"
+pubDate: 2026-03-16
+heroImage: "../../assets/blog-placeholder-3.jpg"
+---
+
+下面这篇文章是 **MDX**，意味着你可以在 Markdown 里直接写组件/JSX（在 Astro 里就是 `mdx` 组件语法）。
+
+## 1. Tailwind 快速验收
+
+<div className="my-6 rounded-xl border border-slate-200 bg-white/60 p-4 shadow-sm">
+  <p className="m-0 text-sm text-slate-600">如果你能看到这个卡片样式（圆角/边框/阴影），说明 Tailwind 生效。</p>
+  <p className="mt-2 m-0 text-base font-semibold text-slate-900">你好，dumbdonkey.top</p>
+</div>
+
+## 2. 代码块/高亮验收
+
+```ts
+export function greet(name: string) {
+  return `Hello, ${name}!`;
+}
+```
+
+## 3. 一个小组件（MDX 里直接写）
+
+export function Callout(props) {
+  return (
+    <div className="my-6 rounded-xl bg-amber-50 p-4 text-amber-900 ring-1 ring-amber-200">
+      <div className="text-sm font-semibold">提示</div>
+      <div className="mt-1 text-sm leading-6">{props.children}</div>
+    </div>
+  );
+}
+
+<Callout>
+  后续我会把 **Giscus 评论组件**插到文章页底部（依赖仓库开启 Discussions）。
+</Callout>
+
+## 4. 你接下来写文章的方式
+
+- Markdown：放在 `src/content/blog/*.md`
+- MDX：放在 `src/content/blog/*.mdx`
+
+只要 frontmatter（title/description/pubDate 等）符合 content schema，就会自动出现在列表里。
