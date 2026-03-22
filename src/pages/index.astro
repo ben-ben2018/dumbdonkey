@@ -14,23 +14,19 @@ import '../styles/global.css';
 	<body>
 		<Header />
 		<main class="home">
-			<section class="hero">
-				<p class="kicker">个人博客 · 随手记 · 慢慢写</p>
-				<h1>笨驴（Dumb Donkey）</h1>
-				<p class="desc">
-					这里放一些做东西的记录、踩坑、想法，以及偶尔的长文。
-					不追热点，只追清楚。
-				</p>
-				<div class="cta">
-					<a class="primary" href="/blog">去看文章</a>
-					<a class="secondary" href="/about">关于我</a>
-				</div>
-				<p class="meta">
-					GitHub：<a href="https://github.com/ben-ben2018" target="_blank" rel="me">ben-ben2018</a>
-				</p>
-			</section>
-
 			<section class="game-grid" aria-label="我在玩的游戏">
+				<article class="game-card yysls">
+					<div class="game-top">
+						<p class="tag">在玩</p>
+						<h2>燕云十六声</h2>
+						<p class="subtitle">宫阙日初升 · 江湖正当时</p>
+					</div>
+					<p class="game-desc">国风武侠氛围拉满：江湖、古建与人间烟火同屏。适合慢慢逛、慢慢练。</p>
+					<div class="game-actions">
+						<a class="game-link" href="https://www.yysls.cn/index.html" target="_blank" rel="noopener">官网</a>
+					</div>
+				</article>
+
 				<article class="game-card sky">
 					<div class="game-top">
 						<p class="tag">在玩</p>
@@ -63,62 +59,9 @@ import '../styles/global.css';
 		margin: 0 auto;
 		padding: 3.5rem 1rem 3rem;
 	}
-	.hero {
-		padding: 2.25rem 1.75rem;
-		border: 1px solid rgba(var(--gray-light), 1);
-		border-radius: 1.25rem;
-		background: linear-gradient(135deg, rgba(var(--accent), 0.08), rgba(var(--accent), 0.02));
-	}
-	.kicker {
-		margin: 0 0 0.5rem 0;
-		color: rgb(var(--gray));
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		font-size: 0.85rem;
-	}
-	h1 {
-		margin: 0 0 0.75rem 0;
-		font-size: clamp(2rem, 4vw, 3rem);
-		line-height: 1.1;
-	}
-	.desc {
-		margin: 0 0 1.25rem 0;
-		color: rgb(var(--gray-dark));
-		max-width: 56ch;
-	}
-	.cta {
-		display: flex;
-		gap: 0.75rem;
-		flex-wrap: wrap;
-		margin: 1rem 0 0.75rem;
-	}
-	.cta a {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.65rem 1rem;
-		border-radius: 0.8rem;
-		text-decoration: none;
-		font-weight: 600;
-		border: 1px solid rgba(var(--accent), 0.35);
-	}
-	.primary {
-		background: rgb(var(--accent));
-		color: white;
-		border-color: rgb(var(--accent));
-	}
-	.secondary {
-		background: rgba(255, 255, 255, 0.65);
-		color: rgb(var(--black));
-	}
-	.meta {
-		margin: 0.25rem 0 0;
-		color: rgb(var(--gray));
-		font-size: 0.95rem;
-	}
 	.game-grid {
 		display: grid;
-		grid-template-columns: repeat(1, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 1rem;
 		margin-top: 1rem;
 	}
@@ -181,6 +124,18 @@ import '../styles/global.css';
 	.game-link:hover {
 		transform: translateY(-1px);
 	}
+	/* 风格：燕云十六声（国风·暮色金） */
+	.game-card.yysls {
+		background: linear-gradient(135deg, rgba(120, 68, 26, 0.12), rgba(255, 208, 139, 0.12));
+		border-color: rgba(120, 68, 26, 0.18);
+	}
+	.game-card.yysls::before {
+		background:
+			radial-gradient(800px 260px at 20% 0%, rgba(255, 208, 139, 0.55), transparent 60%),
+			radial-gradient(700px 320px at 120% 30%, rgba(120, 68, 26, 0.35), transparent 55%),
+			linear-gradient(135deg, rgba(255, 244, 226, 0.65), rgba(255, 255, 255, 0));
+	}
+
 	/* 风格：光遇（清澈·天光蓝） */
 	.game-card.sky {
 		background: linear-gradient(135deg, rgba(76, 168, 255, 0.10), rgba(188, 236, 255, 0.12));
