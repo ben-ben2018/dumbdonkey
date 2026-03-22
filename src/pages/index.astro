@@ -45,6 +45,36 @@ import '../styles/global.css';
 				</article>
 			</section>
 
+			<section class="game-grid" aria-label="我在玩的游戏">
+				<article class="game-card yysls">
+					<div class="game-top">
+						<p class="tag">在玩</p>
+						<h2>燕云十六声</h2>
+						<p class="subtitle">江湖与人间烟火，都在同一张地图上。</p>
+					</div>
+					<p class="game-desc">
+						偏写意的国风武侠氛围：古建、器物、民俗与“十六声”的文化意象。适合慢慢逛、慢慢练。
+					</p>
+					<div class="game-actions">
+						<a class="game-link" href="https://www.yysls.cn/index.html" target="_blank" rel="noopener">官网</a>
+					</div>
+				</article>
+
+				<article class="game-card sky">
+					<div class="game-top">
+						<p class="tag">在玩</p>
+						<h2>光·遇</h2>
+						<p class="subtitle">光是遇见，就很美好。</p>
+					</div>
+					<p class="game-desc">
+						柔和、干净、偏治愈的气质：探索、飞行、社交与陪伴感。适合在压力大的时候把心放慢。
+					</p>
+					<div class="game-actions">
+						<a class="game-link" href="https://sky.163.com/" target="_blank" rel="noopener">官网</a>
+					</div>
+				</article>
+			</section>
+
 			<section class="tip">
 				<p>
 					想测试 Cloudflare Pages 自动部署？你已经成功了。
@@ -135,6 +165,94 @@ import '../styles/global.css';
 		margin: 0;
 		color: rgb(var(--gray-dark));
 	}
+	.game-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+	.game-card {
+		position: relative;
+		padding: 1.35rem 1.25rem;
+		border-radius: 1.25rem;
+		border: 1px solid rgba(var(--gray-light), 1);
+		background: white;
+		overflow: hidden;
+	}
+	.game-card::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		opacity: 0.9;
+		pointer-events: none;
+	}
+	.game-card .tag {
+		margin: 0;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.25rem 0.55rem;
+		border-radius: 999px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		background: rgba(255, 255, 255, 0.75);
+		border: 1px solid rgba(255, 255, 255, 0.85);
+	}
+	.game-top h2 {
+		margin: 0.6rem 0 0.25rem;
+		font-size: 1.35rem;
+	}
+	.game-top .subtitle {
+		margin: 0;
+		color: rgb(var(--gray-dark));
+	}
+	.game-desc {
+		margin: 0.85rem 0 0;
+		color: rgb(var(--gray-dark));
+		max-width: 64ch;
+	}
+	.game-actions {
+		margin-top: 1rem;
+	}
+	.game-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.55rem 0.85rem;
+		border-radius: 0.85rem;
+		text-decoration: none;
+		font-weight: 650;
+		background: rgba(255, 255, 255, 0.8);
+		border: 1px solid rgba(var(--gray-light), 1);
+		color: rgb(var(--black));
+	}
+	.game-link:hover {
+		transform: translateY(-1px);
+	}
+	/* 风格：燕云十六声（国风·暮色金） */
+	.game-card.yysls {
+		background: linear-gradient(135deg, rgba(120, 68, 26, 0.12), rgba(255, 208, 139, 0.12));
+		border-color: rgba(120, 68, 26, 0.18);
+	}
+	.game-card.yysls::before {
+		background:
+			radial-gradient(800px 260px at 20% 0%, rgba(255, 208, 139, 0.55), transparent 60%),
+			radial-gradient(700px 320px at 120% 30%, rgba(120, 68, 26, 0.35), transparent 55%),
+			linear-gradient(135deg, rgba(255, 244, 226, 0.65), rgba(255, 255, 255, 0));
+	}
+	/* 风格：光遇（清澈·天光蓝） */
+	.game-card.sky {
+		background: linear-gradient(135deg, rgba(76, 168, 255, 0.10), rgba(188, 236, 255, 0.12));
+		border-color: rgba(76, 168, 255, 0.20);
+	}
+	.game-card.sky::before {
+		background:
+			radial-gradient(700px 260px at 25% 10%, rgba(188, 236, 255, 0.65), transparent 55%),
+			radial-gradient(700px 320px at 115% 40%, rgba(76, 168, 255, 0.35), transparent 55%),
+			linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+	}
+
 	.tip {
 		margin-top: 1rem;
 		padding: 1rem 1.15rem;
