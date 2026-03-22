@@ -31,20 +31,6 @@ import '../styles/global.css';
 			</section>
 
 			<section class="game-grid" aria-label="我在玩的游戏">
-				<article class="game-card yysls">
-					<div class="game-top">
-						<p class="tag">在玩</p>
-						<h2>燕云十六声</h2>
-						<p class="subtitle">江湖与人间烟火，都在同一张地图上。</p>
-					</div>
-					<p class="game-desc">
-						偏写意的国风武侠氛围：古建、器物、民俗与“十六声”的文化意象。适合慢慢逛、慢慢练。
-					</p>
-					<div class="game-actions">
-						<a class="game-link" href="https://www.yysls.cn/index.html" target="_blank" rel="noopener">官网</a>
-					</div>
-				</article>
-
 				<article class="game-card sky">
 					<div class="game-top">
 						<p class="tag">在玩</p>
@@ -132,7 +118,7 @@ import '../styles/global.css';
 	}
 	.game-grid {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 		gap: 1rem;
 		margin-top: 1rem;
 	}
@@ -194,17 +180,6 @@ import '../styles/global.css';
 	}
 	.game-link:hover {
 		transform: translateY(-1px);
-	}
-	/* 风格：燕云十六声（国风·暮色金） */
-	.game-card.yysls {
-		background: linear-gradient(135deg, rgba(120, 68, 26, 0.12), rgba(255, 208, 139, 0.12));
-		border-color: rgba(120, 68, 26, 0.18);
-	}
-	.game-card.yysls::before {
-		background:
-			radial-gradient(800px 260px at 20% 0%, rgba(255, 208, 139, 0.55), transparent 60%),
-			radial-gradient(700px 320px at 120% 30%, rgba(120, 68, 26, 0.35), transparent 55%),
-			linear-gradient(135deg, rgba(255, 244, 226, 0.65), rgba(255, 255, 255, 0));
 	}
 	/* 风格：光遇（清澈·天光蓝） */
 	.game-card.sky {
