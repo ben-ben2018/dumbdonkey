@@ -30,21 +30,6 @@ import '../styles/global.css';
 				</p>
 			</section>
 
-			<section class="cards">
-				<article class="card">
-					<h2>写什么？</h2>
-					<p>技术笔记、工程实践、效率工具、以及一些不那么“正确”的直觉。</p>
-				</article>
-				<article class="card">
-					<h2>怎么写？</h2>
-					<p>尽量短，必要时长；尽量具体，能复现；尽量诚实，能推翻。</p>
-				</article>
-				<article class="card">
-					<h2>为什么叫笨驴？</h2>
-					<p>慢一点没关系，关键是别停；把难的东西，一步步驮过去。</p>
-				</article>
-			</section>
-
 			<section class="game-grid" aria-label="我在玩的游戏">
 				<article class="game-card yysls">
 					<div class="game-top">
@@ -144,26 +129,6 @@ import '../styles/global.css';
 		margin: 0.25rem 0 0;
 		color: rgb(var(--gray));
 		font-size: 0.95rem;
-	}
-	.cards {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 1rem;
-		margin-top: 1.25rem;
-	}
-	.card {
-		padding: 1.25rem 1.15rem;
-		border: 1px solid rgba(var(--gray-light), 1);
-		border-radius: 1.25rem;
-		background: white;
-	}
-	.card h2 {
-		margin: 0 0 0.5rem;
-		font-size: 1.1rem;
-	}
-	.card p {
-		margin: 0;
-		color: rgb(var(--gray-dark));
 	}
 	.game-grid {
 		display: grid;
