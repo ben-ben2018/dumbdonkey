@@ -1,7 +1,7 @@
 ---
 title: 'MySQL 事务隔离级别与 MVCC'
 description: '为什么 RR 能实现可重复读，而 RC 不能？实现原理是什么？'
-pubDate: 'May 3 2026'
+pubDate: '2024-09-30'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 ---
 
