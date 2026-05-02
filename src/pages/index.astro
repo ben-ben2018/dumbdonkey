@@ -5,10 +5,11 @@ import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import '../styles/global.css';
 ---
+
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<baseHead title={SITE_TITLE = description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
